@@ -14,6 +14,11 @@ The project uses a **custom partition table** defined in `partitions.csv`. The p
 | `ota_1` | app | ota_1 | 5.0 MB (0x4E2000) | Secondary OTA application slot |
 | `littlefs` | data | littlefs | 4 MB (0x3E8000) | LittleFS file system partition |
 
+### Excluded Services
+We will not be making any plans to capture coredumps.  Exclude that possible need from the partition design.
+
+There will NOT be a factory image because we are low on FLASH space already and OTA services are important.   We can't afford to dedicate a third space to program code and is rarely and most of the time, never used.
+
 ### Memory Summary
 
 Claude will calculate and append as comments in the partition tables the following:
