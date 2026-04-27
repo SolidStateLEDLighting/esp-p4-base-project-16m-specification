@@ -4,7 +4,9 @@
 
 ```
 esp-p4-base-project-16m/
-├── main/                        # Main application component (C/C++ source files)
+├── main/                        # Main component (C/C++ source files)
+├── main/src                     # Main component source files
+├── main/include                 # Main component include files
 ├── components/                  # User created components (C/C++ source files)
 ├── .clangd                      # Clangd language server configuration for VS Code
 ├── .gitignore                   # Git ignore rules
@@ -14,7 +16,9 @@ esp-p4-base-project-16m/
 └── sdkconfig.defaults           # Default SDK configuration overrides
 ```
 
-The `main/` subdirectory contains the application entry point and any component-level `CMakeLists.txt`. The primary language of the application code is **C++** (approximately 15.5% of the codebase), with the build system written in **CMake** (approximately 84.5%).
+The `main/src` subdirectory contains the application entry point inside in a file called `main.cpp` and a component-level `CMakeLists.txt`. The primary language of the application code is **C++** with the build system written in **CMake**.
+
+We will create an empty `main.hpp` in `main/include` directory as a placeholder.  Add the `#include "main.hpp"` statement to main.cpp. 
 
 ---
 
@@ -41,5 +45,14 @@ The `sdkconfig.defaults` file provides the minimum required configuration overri
 | `CONFIG_PARTITION_TABLE_CUSTOM` | `y` | Enables custom partition table |
 | `CONFIG_PARTITION_TABLE_CUSTOM_FILENAME` | `partitions.csv` | Points to the custom partition file |
 | `CONFIG_PARTITION_TABLE_OFFSET` | `0xc000` | Required offset for encryption support |
+
+### File Format
+When Claude creates the sdkconfig.default file, each entry into that file should be organized the same way it is organized in a normal sdkconfig file.  Each entry should be grouped in its category.    The category name should be commented as follows:
+
+#
+# `category name`
+#
+
+There is the be no line feeds at the top of the file.  There are to be no line feeds inside each category.  There are to be 1 line feed between each category inside the sdkconfig.defaults file.
 
 ---
