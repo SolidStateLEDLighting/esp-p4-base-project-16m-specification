@@ -1,11 +1,9 @@
 ## Flash Partition Table Specification
-
 The purpose of this application is to provide correct FLASH space for AI workloads and maintain an ability to update both the AI model(s) and the firmware application.
 
 The project uses a **custom partition table** defined in `partitions.csv`. The partition table offset is set to `0xc000` (required when flash encryption is enabled). All memory offsets are calculated automatically by the build system.   Do not include offsets in any generated partition table.
 
 ### Partition Layout
-
 | Name | Type | Subtype | Size | Notes |
 |---|---|---|---|---|
 | `nvs` | data | nvs | 24 KB (0x6000) | Non-volatile storage; cannot be encrypted directly |
