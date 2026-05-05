@@ -15,7 +15,7 @@ This project is a minimal base (boilerplate) application for the Espressif micro
 
 ---  
 
-## Order of Project Parsing
+## 2.2. Order of Project Parsing
 - Read the hardware subdirectory first.
 - Next read the build subdirectory.
 - Finally read the firmware subdirectory.

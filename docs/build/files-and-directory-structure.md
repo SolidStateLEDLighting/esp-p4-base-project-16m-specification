@@ -1,6 +1,6 @@
-## 0.1. File and Directory Structure
+## 1. File and Directory Structure
 
-## 0.2. Project File Structure
+### 1.1. Project File Structure
 
 ```
 esp-p4-base-project-16m/
@@ -22,13 +22,13 @@ We will create an empty `main.hpp` in `main/include` directory as a placeholder.
 
 ---
 
-### 0.2.1. IDE Support
+### 1.2. IDE Support
 
 The `.clangd` file that is included at the project root will support the Clangd language server in VS Code. The configuration removes compiler flags prefixed with `-f*` and `-m*`, which are specific to the Xtensa/RISC-V GCC toolchain and would otherwise cause Clangd errors when parsing source files.
 
 ---
 
-## 0.3. SDK Default Configuration (sdkconfig.defaults)
+## 2. SDK Default Configuration (sdkconfig.defaults)
 
 The `sdkconfig.defaults` file provides the minimum required configuration overrides for this project. These values are automatically applied when the project is first configured or when `idf.py set-target esp32p4` is run.
 
@@ -46,7 +46,7 @@ The `sdkconfig.defaults` file provides the minimum required configuration overri
 | `CONFIG_PARTITION_TABLE_CUSTOM_FILENAME` | `partitions.csv` | Points to the custom partition file |
 | `CONFIG_PARTITION_TABLE_OFFSET` | `0xc000` | Required offset for encryption support |
 
-### 0.3.1. File Format
+### 2.1. File Format
 When Claude creates the sdkconfig.default file, each entry into that file should be organized the same way it is organized in a normal sdkconfig file.  Each entry should be grouped in its category.    The category name should be commented as follows:
 
 #
