@@ -26,10 +26,7 @@
 
 ---
 
-### 1.4. Build Configuration
-
-The project uses a **minimal build** configuration (`MINIMAL_BUILD ON`), meaning CMake only compiles the `main` component and its direct dependencies. This keeps build times fast and binary size small.
-
-The project name as registered with the CMake build system is: `p4-base-project-16m`
+### 1.4. Output Project Directory Naming
+The generated project directory shall have the same name as the specification directory, but with the `-specification` designation removed.
 
 ---

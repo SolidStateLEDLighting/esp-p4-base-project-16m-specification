@@ -23,10 +23,10 @@ The project uses a **custom partition table** defined in `partitions.csv`. The p
 | `coredump` | data | coredump | 984 KB (0x0F6000) | Coredump partition |
 
 ### 1.2. Excluded Services
-There will NOT be a factory image because we much conserve FLASH space.
+There will NOT be a factory image because we must conserve FLASH space.
 
 ### 1.3. Memory Summary
-Claude will calculate and append to the file afer the table is written comments of the following:
+Claude will calculate and append to the file after the table has been written the following comments:
 
 `#`
 - Total flash capacity (decimal bytes and hex)
@@ -34,7 +34,7 @@ Claude will calculate and append to the file afer the table is written comments 
 - Unused / reserved space (decimal bytes and hex)
 `#`
 
-Since this is just a specification, this action does not occur here.   Claude will append these comment to the final partition table when real source code is being generated.
+Since this is just a specification, this action does not occur here.   Claude will append these comments to the final partition table when real source code is being generated.
 
 ### 1.4. OTA (Over-the-Air Update) Support
 The partition layout explicitly supports dual-bank OTA updates. The `otadata` partition controls which application slot (`ota_0` or `ota_1`) is booted. Each OTA application partition is 4.0 MB, providing ample space for commercial-grade firmware images (without embedded AI models).
@@ -51,4 +51,4 @@ The partition table is prepared for optional flash encryption. The following rul
 
 ### 1.7. Working Facts
 - 1024 bits x 1024 bits = 1Mbit
-- 1Mbit x 8 = 1MB
+- 1Mbit x 8 = 8 Mbit = 1MB
