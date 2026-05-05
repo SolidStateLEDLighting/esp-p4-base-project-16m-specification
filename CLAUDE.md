@@ -5,18 +5,21 @@
 **Author / Organization:** SolidStateLEDLighting  
 **Document Version:** 1.0  
 **Date:** April, 2026  
+
 ---  
 
 ## 2. Overview
 
 ### 2.1. Purpose
 This project is a minimal base (boilerplate) application for the Espressif microcontroller compiled with the ESP-IDF. Its purpose is to serve as a clean, pre-configured starting point for new firmware projects.   The specific hardware will be outlined from within the specification.
+
 ---  
 
 ## Order of Project Parsing
 - Read the hardware subdirectory first.
 - Next read the build subdirectory.
 - Finally read the firmware subdirectory.
+
 ---  
 
 ## 3. Design Constraints and Assumptions
@@ -25,6 +28,7 @@ This project is a minimal base (boilerplate) application for the Espressif micro
 - Skills for this project exist only in the C:\Users\Upwork\.claude\skills\ directory.  
 - Claude will inspect all markdown documents inside this project and look its lists of required skills.  
 - If Claude is missing the required skill at the user level, the generation of the project will terminate and a warning will be printed to the command line output.
+
 ---  
 
 ## 4. Scope
@@ -37,6 +41,7 @@ Claude SHALL:
 - Use the IDE tooling support for VS Code via a Clangd configuration file
 - Create a main subdirectory located at the root of the project.
 - Create a components subdirectory located at the root of the project.
+
 ---  
 
 ## 5. Possible Intended Function
@@ -75,6 +80,7 @@ The following are possible uses by the firmware and as such the base design shou
 | Inference logs | e.g. 200 KB | |
 | Certificates | e.g. 10 KB | |
 | **Total estimated** | e.g. 760 KB | |
+
 ---  
 
 ## 6. Glossary
@@ -89,6 +95,7 @@ The following are possible uses by the firmware and as such the base design shou
 | Clangd | A C/C++ language server that provides IDE features such as code completion and error checking |
 | Partition Table | A data structure in flash that describes how flash memory is divided among different uses |
 | sdkconfig.defaults | A file that provides default values for ESP-IDF configuration options |
+
 ---
 
 *End of Specification*
