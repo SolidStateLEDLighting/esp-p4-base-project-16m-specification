@@ -1,12 +1,12 @@
-## Tools and Building
+## 1. Tools and Building
 
-### Prerequisites
+### 1.1. Prerequisites
 
 - ESP-IDF v6.0.0 installed and sourced
 - VS Code with the Espressif IDF Extension (recommended)
 - A physical ESP32-P4 development board with 16 MB flash
 
-### Development Environment
+### 1.2. Development Environment
 
 | Tool | Version / Requirement |
 |---|---|
@@ -16,7 +16,7 @@
 | Language Standard | C / C++ |
 | Build System | CMake via `idf.py` |
 
-### Steps
+### 1.3. Steps
 
 1. Clone the repository and open the root directory in VS Code.
 2. Run `idf.py set-target esp32p4` to configure the target chip.
@@ -26,7 +26,7 @@
 
 ---
 
-### Build Configuration
+### 1.4. Build Configuration
 
 The project uses a **minimal build** configuration (`MINIMAL_BUILD ON`), meaning CMake only compiles the `main` component and its direct dependencies. This keeps build times fast and binary size small.
 

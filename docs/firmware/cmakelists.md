@@ -1,7 +1,7 @@
-## CMakeLists.txt Files
+## 1. CMakeLists.txt Files
 Here is an example of that format that I want you to learn and reproduce.
 
-<example start>
+<example>
 #
 # Use the Global Recursive action to gather up all the source files under a variable called SOURCES
 #
@@ -41,9 +41,10 @@ idf_component_register(SRCS ${SOURCES}
                        REQUIRES ${REQUIRES}
                        PRIV_REQUIRES ${PRIV_REQUIRES}
 )
-<example end>
+</example>
 
-1) Add these notes at the top to each CMakeLists.txt files.
+## 2. Execution List
+1) Add notes at the top to each CMakeLists.txt files.
 2) Add the FILE statement as seen to capture all the src/*.cpp files
 3) Add the REQUIRES and the PRIV_REQUIRES sections.  Do not include these example components.
 4) Include the idf_component_register call.

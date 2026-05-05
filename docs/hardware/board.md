@@ -1,4 +1,5 @@
-### Target Hardware
+### 1. Target Hardware
+This project is written specifically to run on 
 
 | Parameter | Value |
 |---|---|
